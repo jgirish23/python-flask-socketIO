@@ -16,7 +16,7 @@ Clone repo and create a virtual environment
 
 ```
 $ git clone https://github.com/jgirish23/python-flask-socketIO
-$ cd mysite
+$ cd python-flask-socketIO
 $ python -m venv .env
 $ cd ./env/bin
 $./activate
