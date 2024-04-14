@@ -25,8 +25,7 @@ cd ./env/bin
 Install dependencies
 
 ```
-(venv)
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Create environment variables in a .env file
@@ -36,5 +35,5 @@ Run
 
 ```
 (venv)
-$ flask --app main.py run
+flask --app main.py run
 ```
