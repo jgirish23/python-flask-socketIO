@@ -166,6 +166,16 @@ header h2 {
   visibility: hidden;
   font-size: 1.35rem;
 }
+.chat-input button {
+  align-self: flex-end;
+  color: #724ae8;
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  font-size: 1.35rem;
+}
 .chat-input textarea:valid ~ span {
   visibility: visible;
 }
@@ -192,4 +202,20 @@ header h2 {
   .chatbot header span {
     display: block;
   }
+}
+
+/* Styling for the main heading container */
+.main-heading-container {
+
+  background-color: #f0f0f0; /* Background color */
+  padding: 20px; /* Padding around the heading */
+}
+
+/* Styling for the heading text */
+.heading {
+  padding-top: 100px;
+  color: #981313; /* Text color */
+  font-size: 62px; /* Font size */
+  text-align: center; /* Center align the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow for special effect */
 }
