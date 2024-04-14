@@ -34,6 +34,5 @@ or using console.
 Run
 
 ```
-(venv)
 flask --app main.py run
 ```
