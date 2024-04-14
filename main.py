@@ -174,7 +174,7 @@ def print_disease(node):
 
 cnt = 0
 curr_input = ""
-curr_output = "Your Name? \t\t\t\t"
+curr_output = "Hello!! \t\t\t\t"
 
 def tree_to_code(tree, feature_names):
     tree_ = tree.tree_
@@ -369,19 +369,23 @@ check = 1
 def handle_message(message):
     print('Received message:', message)
     # if(cnt%2 == 0):
-    global curr_input
+    global curr_input, curr_output
     curr_input = message["someData"]
 	# Handle the message and send a response if needed
 	# response = {'status': 'OK'}
-    socketio.emit('server_message', {'message': curr_output})
-    print('Server message:', curr_output)
+
     # cnt = cnt +1
     # socketio.emit('response', {"status": "OK"})
     global check
     if check:
         check = 0
         curr_input = None
+        socketio.emit('server_message', {'message': curr_output})
+        print('Server message:', curr_output)
         tree_to_code(clf,cols)
+        check = 1
+        curr_input = None
+        curr_output = "Hello!!"
         socketio.emit('server_message', {'message': "Thank you!!!"})
 
 
