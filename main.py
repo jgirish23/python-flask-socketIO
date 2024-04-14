@@ -327,7 +327,6 @@ def tree_to_code(tree, feature_names):
                 # readn(f"{description_list[present_disease[0]]}")
 
             else:
-                # global curr_output
                 curr_output = "You may have " + str(present_disease[0]) + "or " + str(second_prediction[0])
                 print("You may have ", present_disease[0], "or ", second_prediction[0])
                 socketio.emit('server_message', {'message': curr_output})
@@ -383,6 +382,7 @@ def handle_message(message):
         check = 0
         curr_input = None
         tree_to_code(clf,cols)
+        socketio.emit('server_message', {'message': "Thank you!!!"})
 
 
 
